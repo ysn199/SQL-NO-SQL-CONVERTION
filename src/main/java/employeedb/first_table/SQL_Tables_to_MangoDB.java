@@ -25,8 +25,7 @@ import org.bson.Document;
  * @author yassi
  */
 public class SQL_Tables_to_MangoDB {
-
-    public boolean transfer(String databaseName) throws IOException {
+     public boolean transfer(String databaseName) throws IOException {
         try {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3308/"+databaseName, "root", "");
             Statement statement = connection.createStatement();
@@ -84,5 +83,4 @@ public class SQL_Tables_to_MangoDB {
     public static void main(String[] args) throws IOException {
         new SQL_Tables_to_MangoDB().transfer("classicmodels");
     }
-
 }
